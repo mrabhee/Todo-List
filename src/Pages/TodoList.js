@@ -4,7 +4,6 @@ import { collectionId, databaseId } from '../Appwrite/appwriteid'
 import { Query } from 'appwrite'
 
 const TodoList = ({emailid}) => {
-    const [todo, setTodo] = useState([])
     const [newTodo, setNewTodo] = useState('')
     const [viewtodo, setViewtodo] = useState([])
 
