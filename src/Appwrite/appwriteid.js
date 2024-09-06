@@ -1,0 +1,5 @@
+export const appwriteUrl = String(process.env.REACT_APP_APPWRITE_URL)
+export const projectId = String(process.env.REACT_APP_APPWRITE_PROJECT_ID)
+export const databaseId = String(process.env.REACT_APP_APPWRITE_DATABASE_ID)
+export const collectionId = String(process.env.REACT_APP_APPWRITE_COLLECTION_ID)
+export const bucketId = String(process.env.REACT_APP_APPWRITE_BUCKET_ID)
