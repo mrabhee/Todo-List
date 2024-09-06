@@ -51,8 +51,8 @@ const TodoList = ({emailid}) => {
     }
 
     useEffect(() => {
-        handleView()
-    }, [emailid])
+       console.log("useeffect todo")
+    }, [handleView])
 
     return (
         <>
