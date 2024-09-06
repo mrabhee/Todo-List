@@ -58,7 +58,7 @@ const TodoList = ({ emailid }) => {
 
     return (
         <>
-            <div className="flex flex-col w-1/2 mx-auto p-4 bg-white rounded shadow-md mt-10">
+            <div className="flex flex-col w-full md:w-1/2 mx-auto p-4  bg-white rounded shadow-md mt-10">
                 <h1 className="text-3xl font-bold mb-4">Todo List</h1>
 
                 <form onSubmit={handleSubmit} className='flex items-center justify-center'>
