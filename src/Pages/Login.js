@@ -57,6 +57,9 @@ function Login() {
                 alert("Invalid email or password. Please try again.")
             } else {
                 setError(error.message)
+                setTimeout(()=>{
+                    setError(null)
+                },4000)
             }
         }
     }

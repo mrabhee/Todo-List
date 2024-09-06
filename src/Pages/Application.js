@@ -13,7 +13,7 @@ function Application() {
         e.preventDefault()
         try {
             nav('/')
-            await account.deleteSession('current')
+            // await account.deleteSession('current')
 
         } catch (error) {
             console.log(error)
@@ -35,7 +35,7 @@ function Application() {
 
         }
         getAcc()
-    }, [])
+    },[])
 
     return (
         <>
