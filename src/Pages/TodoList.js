@@ -54,7 +54,7 @@ const TodoList = ({ emailid }) => {
 
     useEffect(() => {
         handleView()
-    }, [emailid])
+    }, [databaseId, collectionId, emailid, database, setViewtodo, Query])
 
     return (
         <>
