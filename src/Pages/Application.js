@@ -30,7 +30,7 @@ function Application() {
                     setEmail(acc.email)
                 }
             } catch (error) {
-
+                console.log(error)
             }
 
         }
