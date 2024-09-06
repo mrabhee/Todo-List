@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useCallback, useEffect, useState } from 'react'
 import { database } from '../Appwrite/config'
 import { collectionId, databaseId } from '../Appwrite/appwriteid'
 import { Query } from 'appwrite'
@@ -32,14 +32,15 @@ const TodoList = ({ emailid }) => {
         }
     }
 
-    const handleView = async () => {
+    const handleView = useCallback(async () => {
         try {
             const dbtodo = await database.listDocuments(databaseId, collectionId, [Query.equal('email', emailid)])
             setViewtodo(dbtodo.documents)
+            
         } catch (error) {
             console.log(error)
         }
-    }
+    },[databaseId, collectionId, emailid, database, setViewtodo, Query])
 
     const handleDelete = async (id) => {
         try {
