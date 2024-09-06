@@ -36,11 +36,11 @@ const TodoList = ({ emailid }) => {
         try {
             const dbtodo = await database.listDocuments(databaseId, collectionId, [Query.equal('email', emailid)])
             setViewtodo(dbtodo.documents)
-            
+
         } catch (error) {
             console.log(error)
         }
-    },[databaseId, collectionId, emailid, database, setViewtodo, Query])
+    }, [emailid])
 
     const handleDelete = async (id) => {
         try {
@@ -49,12 +49,12 @@ const TodoList = ({ emailid }) => {
         } catch (error) {
             console.log(error)
         }
-    } 
+    }
 
 
     useEffect(() => {
         handleView()
-    }, [databaseId, collectionId, emailid, database, setViewtodo, Query])
+    }, [handleView])
 
     return (
         <>
