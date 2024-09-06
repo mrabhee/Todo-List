@@ -39,7 +39,7 @@ const TodoList = ({ emailid }) => {
         } catch (error) {
             console.log(error)
         }
-    })
+    },[handleView])
 
     const handleDelete = async (id) => {
         try {
